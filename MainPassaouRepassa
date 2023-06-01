@@ -34,3 +34,69 @@ for(;;){
 
 ///Fim do programa
 //--------------------------------------------------------------------------------
+int b1 = 4;
+int b2 = 3;
+int e1 = 0;
+int e2 = 0;
+int led1 = 12;
+int led2 = 8;
+int buzina = 10;
+int trava = 0;
+
+void setup(){
+  pinMode(b1, INPUT);
+  pinMode(b2, INPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(buzina, OUTPUT);
+}
+void inicialização(){
+delay(1000); // Wait for 1000 millisecond(s)
+digitalWrite(led1, 1);
+digitalWrite(led2, 1);
+delay(1500); // Wait for 1500 millisecond(s)
+digitalWrite(led1, 0);
+digitalWrite(led2, 0);
+delay(400); // Wait for 400 millisecond(s)
+digitalWrite(led1, 1);
+digitalWrite(led2, 1);
+delay(200); // Wait for 200 millisecond(s)
+digitalWrite(led1, 0);
+digitalWrite(led2, 0);
+delay(400); // Wait for 400 millisecond(s)
+ }
+ 
+ 
+int trava = 0;
+for(;;){
+    e1 = digitalRead(b1);
+    e2 = digitalRead(b2);
+    
+    if ((trava == 0)&&(e1 == 1)){
+        trava = 1; // o outro led/botão fica impedido de sar acionado
+        digitalWrite(buzina, 1); //aciona buzina
+        int i = 0; //LED pisca 7 vezes em 2,1 segundos
+        for (i = 0; i < 7; i++){
+            digitalWrite(led1, 1);
+            delay(200); // Wait for 200 millisecond(s)
+            digitalWrite(led1, 0);
+            delay(200); // Wait for 100 millisecond(s)
+        }
+        digitalWrite(buzina, 0); //desarma buzina
+        trava = 0;
+    }
+
+    if ((trava == 0)&&(e2 == 1)){
+        trava = 1; // o outro led/botão fica impedido de sar acionado
+        digitalWrite(buzina, 1); //aciona buzina
+        int i = 0; //LED pisca 7 vezes em 2,1 segundos
+        for (i = 0; i < 7; i++){
+            digitalWrite(led2, 1);
+            delay(200); // Wait for 200 millisecond(s)
+            digitalWrite(led2, 0);
+            delay(200); // Wait for 100 millisecond(s)
+        }
+        digitalWrite(buzina, 0); //desarma buzina
+        trava = 0;
+    }
+}
