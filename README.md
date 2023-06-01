@@ -1,5 +1,5 @@
 # Passa-ou-repassa-IBC
-Software para implementar em arduíno do jogo Passa ou Repassa do SBT - Celso Portioli
+Software para implementar em arduíno o jogo Passa ou Repassa do SBT - Celso Portioli
 Descrição: Dois jogadores posicionam-se frente à frente numa mesa retangular. Cada um em uma ponta da mesa. Diante de cada jogador, há um botão cogumelo e um giroled. De um lado da mesa, está o narrador, que faz uma pergunta (do outro lado, onde estão os espetadores, há dois displays próximos a cada jogador, que marca os pontos de cada um, e outro display centralizado, que serve de timer de 10 segundos, com decisegundos e centisegundos).
 
 Então, se um jogador souber a resposta, ele aperta seu botão. Simultaneamente, 
