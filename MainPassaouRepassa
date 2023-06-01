@@ -1,0 +1,36 @@
+#include <stdlib.h>
+
+*/ 
+    Equipes: Azul versus Vermelha
+    Descrição de estados:
+    S_0: Inicialização da máquina
+    S_1: EstadoNeutro
+    S_2: BotaoAzulFoiPressionado
+    S_3: BotaoVermelhoFoiPressionado
+/*
+//Declaração de Variáveis:
+int BotaoAzul     = 0; 
+int BotaoVermelho = 0
+
+//--------------------------------------------------------------------------------
+//Início do programa
+
+void inicialização();
+
+int EstadoAtual = EstadoNeutro;
+for(;;){
+    switch(EstadoAtual){
+    
+        case BotaoAzulFoiPressionado:
+        { void BloqueiaVermelhoPiscaLEDAzulBuzina();
+          EstadoAtual = EstadoNeutro
+        }
+        
+        case BotaoVermelhoFoiPressionado:
+        { void BloqueiaAzulPiscaLEDVermelhoBuzina();
+          EstadoAtual = EstadoNeutro
+        }
+} 
+
+///Fim do programa
+//--------------------------------------------------------------------------------
